@@ -36,7 +36,7 @@ public class JogoYuGiOh {
 
         System.out.print("Escolha sua carta pelo número, " + jogador.getNome() + ": ");
         int escolha = scanner.nextInt();
-        return (Carta) jogador.getDeck().toArray()[escolha]; // Converte Set para Array para pegar pelo índice
+        return (Carta) jogador.getDeck().toArray()[escolha]; 
     }
 
     private static void exibirVencedorFinal(Jogador jogador1, Jogador jogador2) {
