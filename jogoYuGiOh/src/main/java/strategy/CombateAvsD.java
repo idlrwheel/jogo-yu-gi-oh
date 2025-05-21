@@ -4,6 +4,9 @@
  */
 package strategy;
 
+import model.Carta;
+import model.Jogador;
+
 /**
  *
  * @author Giovanna
@@ -25,4 +28,4 @@ public class CombateAvsD implements EstrategiaCombate {
             System.out.println("Empate na rodada!");
             return 0;
         }
-    }
+    }}
