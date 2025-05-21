@@ -14,7 +14,7 @@ import model.Carta;
 public class CartaFactory {
      private static final Random random = new Random();
      
-     private static Carta gerarCartaAleatoria(){
+     public static Carta gerarCartaAleatoria(){
          int ataque = random.nextInt(10) + 1;
          int defesa = random.nextInt(10) + 1;
          return new Carta(ataque, defesa);
