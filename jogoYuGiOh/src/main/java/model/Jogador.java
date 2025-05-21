@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package model;
-import com.factory.*;
+import factory.CartaFactory;
+
 /**
  *
  * @author Giovanna
