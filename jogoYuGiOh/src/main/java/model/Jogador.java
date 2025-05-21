@@ -1,24 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
-import factory.CartaFactory;
 
-/**
- *
- * @author Giovanna
- */
+import factory.CartaFactory;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Jogador {
-     private String nome;
-    private Set<Carta> deck; 
-    private List<Carta> mao; 
+    private String nome;
+    private Set<Carta> deck;
+    private List<Carta> mao;
+    private int pontos;
 
     public Jogador(String nome) {
         this.nome = nome;
         this.deck = new HashSet<>();
         this.mao = new ArrayList<>();
-        inicializarDeckAleatorio(); 
+        this.pontos = 0;
+        inicializarDeckAleatorio();
     }
 
     public String getNome() {
@@ -33,11 +32,18 @@ public class Jogador {
         return mao;
     }
 
+    public int getPontos() {
+        return pontos;
+    }
+
+    public void adicionarPonto() {
+        pontos++;
+    }
+
     private void inicializarDeckAleatorio() {
         while (deck.size() < 6) {
             Carta novaCarta = CartaFactory.gerarCartaAleatoria();
-            deck.add(novaCarta); 
+            deck.add(novaCarta);
         }
     }
-
 }
